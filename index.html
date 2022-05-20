@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body>
+    <div class="header">
+        <div class="orario d-flex"><strong>9:41</strong></div>
+        <div class="icon d-flex"><span></span><i class="fas fa-signal icona"></i><i class="fas fa-wifi icona"></i><i class="fas fa-battery-full icona"></i></div>
+    </div>
+    <div class="logo">
+        <img src="Screenshot (5672).png" alt="">
+    </div>
+    <div class="webSite mt-3 pl-3">Trova il sito più vicino a te</div>
+    <div class="containerSearch p-1">
+        <input type="text" placeholder="Cerca un sito">
+        <span>Annulla</span>
+    </div>
+    <div class="selection d-flex">
+        <div class="lista active">LISTA</div>
+        <div class="mappa borderW">MAPPA</div>
+    </div>
+    <div class="listaElementi">
+        <div class="elemento d-flex justify-content-between">
+            <div>Ponte Abbadesse</div>
+            <div>FOT01A</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>Comet</div>
+            <div>FOT01A</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>Riccione San Martino</div>
+            <div>RNT800</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>RN FIERA</div>
+            <div>RNT801</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>RN CENTRO</div>
+            <div>RNT802</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>NR MIRAMARE</div>
+            <div>RNT803</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>Riccione Alba</div>
+            <div>RNT800</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>Rimini consigliano</div>
+            <div>RNT800</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>Ponte Abbadesse</div>
+            <div>FOT01A</div>
+        </div>
+        <div class="elemento d-flex justify-content-between">
+            <div>RN CENTRO</div>
+            <div>RNT802</div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        const listaElement = document.querySelector('.listaElementi');
+        const mappa = document.querySelector('.mappa');
+        const lista = document.querySelector('.lista');
+        lista.addEventListener('click',function(){
+            mappa.classList.remove('active');
+            mappa.classList.add('borderW');
+            lista.classList.remove('borderW');
+            lista.classList.add('active');
+            listaElement.classList.remove('none');
+        });
+        
+        mappa.addEventListener('click',function(){
+            lista.classList.remove('active');
+            lista.classList.add('borderW');
+            mappa.classList.remove('borderW');
+            mappa.classList.add('active');
+            listaElement.classList.add('none');
+        });
+
+    </script>
+</body>
+</html>
